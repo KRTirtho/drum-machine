@@ -1,0 +1,288 @@
+* {
+  color: black;
+  background-color: #1d1d1d;
+}
+
+#drum-machine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+#drum-machine #display {
+  max-width: 300px;
+  min-width: 250px;
+  height: 70px;
+  background-color: #002358;
+  border: 5px solid #b3d8fc;
+  -webkit-box-shadow: inset 0px 0px 20px cyan;
+          box-shadow: inset 0px 0px 20px cyan;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.671);
+          box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.671);
+  border-radius: 15px;
+  margin-bottom: 50px;
+  position: absolute;
+  left: 50%;
+  top: -30%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#drum-machine #display ::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #98bcff52), to(transparent));
+  background-image: linear-gradient(180deg, #98bcff52 10%, transparent);
+  border-radius: 10px 10px 0 0;
+}
+
+#drum-machine #display p {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 30px;
+  background-color: transparent !important;
+  color: #99f0ff;
+  text-shadow: 0px 0px 10px cyan;
+  text-shadow: inset 0px 0px 30px cyan;
+}
+
+#drum-machine .drum-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* enable flex items to wrap */
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#drum-machine .drum-container .drum-pad {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+  /* don't grow, don't shrink, width */
+  height: 100px;
+  width: 50px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 15px;
+  color: #1d1d1d;
+  font-size: 30px;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 54, 153, 0.692);
+          box-shadow: 0px 0px 10px 3px rgba(0, 54, 153, 0.692);
+  outline: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+#drum-machine #snare {
+  background-image: radial-gradient(#6cc9ff, #5ba2ff, #0066ff);
+}
+
+#drum-machine #snare:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #snare:active {
+  opacity: 0.9;
+}
+
+#drum-machine #kick {
+  background-image: radial-gradient(#cdffea, #57fac4, #01ff6b);
+}
+
+#drum-machine #kick:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #kick:active {
+  opacity: 0.9;
+}
+
+#drum-machine #hat {
+  background-image: radial-gradient(#ffa9ff, #fa71ff, magenta);
+}
+
+#drum-machine #hat:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #hat:active {
+  opacity: 0.9;
+}
+
+#drum-machine #hiHat {
+  background-image: radial-gradient(#fa8ca7, #ff5b63, #ff004c);
+}
+
+#drum-machine #hiHat:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #hiHat:active {
+  opacity: 0.9;
+}
+
+#drum-machine #crymbal {
+  background-image: radial-gradient(#cfaaff, #a25bff, #8400ff);
+}
+
+#drum-machine #crymbal:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #crymbal:active {
+  opacity: 0.9;
+}
+
+#drum-machine #tom {
+  background-image: radial-gradient(#f4f8bb, #dffa45, #ffee00);
+}
+
+#drum-machine #tom:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #tom:active {
+  opacity: 0.9;
+}
+
+#drum-machine #percussion {
+  background-image: radial-gradient(#ffe3a6, #f8ce73, #ffa600);
+}
+
+#drum-machine #percussion:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #percussion:active {
+  opacity: 0.9;
+}
+
+#drum-machine #lowKick {
+  background-image: radial-gradient(#bcffb6, #86ff56, #09ff00);
+}
+
+#drum-machine #lowKick:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #lowKick:active {
+  opacity: 0.9;
+}
+
+#drum-machine #fxBell {
+  background-image: radial-gradient(#affffb, #7cffff, #00eeff);
+}
+
+#drum-machine #fxBell:hover {
+  opacity: 0.8;
+}
+
+#drum-machine #fxBell:active {
+  opacity: 0.9;
+}
+
+h1 {
+  text-align: center;
+  color: #99f0ff;
+  text-shadow: 0px 0px 10px cyan;
+  text-shadow: inset 0px 0px 30px cyan;
+  padding-top: 50px;
+}
+
+.instruction {
+  color: white;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.instruction h2 {
+  color: #ff99bb;
+  text-shadow: 0px 0px 10px #ff0037;
+  text-shadow: inset 0px 0px 30px #ff004c;
+  text-align: center;
+}
+
+.instruction ul {
+  width: 40%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.instruction ul li {
+  color: #f8ff99;
+  text-shadow: 0px 0px 10px #ffd900;
+  text-shadow: inset 0px 0px 30px #ffe600;
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background: black;
+  width: 100%;
+  padding: 50px 0px;
+}
+
+footer p {
+  background-color: black;
+  color: white;
+}
+
+footer p a {
+  color: #ffe9cc;
+  text-shadow: 0px 0px 10px #ffe600;
+  text-shadow: inset 0px 0px 30px #ffd900;
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+footer p a:hover {
+  color: #deccff;
+  text-shadow: 0px 0px 10px #006eff;
+  text-shadow: inset 0px 0px 30px #006eff;
+  text-decoration: none;
+}
+
+@media (max-width: 530px) {
+  .instruction {
+    width: 100%;
+  }
+  .instruction h2 {
+    font-size: 25px;
+  }
+  .instruction ul {
+    width: 80%;
+  }
+  .drum-container {
+    padding: 0 5%;
+  }
+  .drum-pad {
+    height: 60px;
+  }
+  footer p {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
