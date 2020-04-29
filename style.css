@@ -39,7 +39,11 @@
 
 #drum-machine #display::after {
   content: '';
+<<<<<<< HEAD
   position: absolute;
+=======
+  position: relative;
+>>>>>>> ef5379456e180014974c09f0a7bf1339d156596c
   top: 0;
   left: 0;
   width: 100%;
